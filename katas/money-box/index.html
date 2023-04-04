@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Копилка - расчёт ячеек</title>
+</head>
+<body>
+  <div class="container">
+    <div class="money-box">
+      <form class="money-form">
+        <div class="form-item">
+          <span class="label">Цель (сумма копилки):</span>
+          <input type="number" name="goal" class="goal">
+        </div>
+        <div class="form-item">
+          <span class="label">Кол-во ячеек:</span>
+          <input type="number" name="count-cells" class="count-cells">
+        </div>
+        <div class="form-item">
+          <span class="label">Мин. шаг:</span>
+          <input type="number" name="min-step" class="min-step">
+        </div>
+        
+
+        <input type="submit" value="Рассчитать" class="form-item submit-btn">
+      </form>
+    </div>
+
+
+    <div class="result-box disabled">
+      <div class="result-cnt">
+        <!-- <div class="res-item">
+          <span>Список ячеек:&nbsp;</span><span class="cells-res"></span>
+        </div>
+      
+        <div class="res-item">
+          <span>Общая сумма: &nbsp;</span><span class="sum-res"></span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

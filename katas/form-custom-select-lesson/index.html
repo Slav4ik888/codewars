@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form custom select lesson</title>
+
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+  <div class="container">
+
+    <div class="wgt no-widget">
+      <form>
+        <select name="myFruit">
+          <option>Cherry</option>
+          <option>Lemon</option>
+          <option>Banana</option>
+          <option>Strawberry</option>
+          <option>Apple</option>
+        </select>
+      
+        
+        <!-- This is our main container for our control.
+            The tabindex attribute is what allows the user to focus the control.
+            We'll see later that it's better to set it through JavaScript. -->
+        <div class="select" tabindex="0" role="listbox">
+        
+          <!-- This container will be used to display the current value of the control -->
+          <span class="value">Cherry</span>
+        
+          <!-- This container will contain all the options available for our control.
+              Because it's a list, it makes sense to use the ul element. -->
+          <ul class="optList hidden" role="presentation">
+            <!-- Each option only contains the value to be displayed, we'll see later
+                how to handle the real value that will be sent with the form data -->
+            <li class="option" role="option">Cherry</li>
+            <li class="option" role="option">Lemon LemonLemonLemonLemonLemonLemon</li>
+            <li class="option" role="option">Banana</li>
+            <li class="option" role="option">Strawberry</li>
+            <li class="option" role="option">Apple</li>
+          </ul>
+        
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

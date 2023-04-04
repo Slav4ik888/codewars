@@ -1,0 +1,1 @@
+export const getNode = (target) => document.querySelector(target);

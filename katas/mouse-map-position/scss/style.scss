@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(#666, #222);
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+}
+
+.content {
+  --positionX: 0;
+  --positionY: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: calc(100px + var(--positionX) * 20px);
+  height: calc(100px + var(--positionY) * 20px);
+  background: white;
+  transition: all 0.3s;
+}
+.cell {
+  width: 100%;
+  height: 100%;
+  // border: 1px solid gray;
+  z-index: 2;
+}
+
+// .cell:nth-child(23):hover ~ .content {
+//   background-color: darkblue;
+//   --positionX: 1;
+//   --positionY: 3;
+// }
+
+@for $i from 0 through 10 {
+  // div {
+  //   &:nth-child(#{$i}) {
+  //     &::after {
+  //       content: "#{$i}";
+  //     }
+  //   }
+  // }
+
+  .cell:nth-child(10n + #{$i + 1}):hover ~ .content {
+    --positionX: #{$i};
+  }
+  .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover
+    ~ .content {
+    --positionY: #{$i};
+  }
+}

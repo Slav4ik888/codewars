@@ -1,0 +1,38 @@
+/* :root {
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+} */
+.container {
+  width: 600px;
+  margin: auto;
+}
+.box {
+  margin: 20px 0 20px 0;
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px dotted chartreuse;
+  background-color: cornsilk;
+}
+.mover {
+  width: 30px;
+  height: 30px;
+  background-color: blueviolet;
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+}
+.module {
+  width: 600px;
+  height: 300px;
+  border: 1px solid white;
+  background-image: url(https://images.unsplash.com/photo-1499162526249-f5b8b9ba9923?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=865bf5c0b77ceb22e88de9fd41c5a671);
+  background-size: 1000px;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: radial-gradient(#666, #222);
+}

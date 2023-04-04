@@ -1,0 +1,15 @@
+{
+  "name": "mouse-map-position",
+  "version": "1.0.0",
+  "description": "Обучение движению картинок через scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "author": "Vyacheslav",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
