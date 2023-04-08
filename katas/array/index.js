@@ -7,10 +7,15 @@ console.log(`Start`);
 
 console.log(`End`);
 
+const MOCK_ARTICLE = { mock: '123' }
+
 // Create and fill array
-new Array(16)
-  .fill(0)
-  .map((_, idx) => ({
-    ...MOCK_ARTICLE,
-    id: String(idx)
-  }))
+const createArr = (length, fillItem) => {
+  if (! length) return []
+  
+  return new Array(length)
+    .fill(0)
+    .map((_, idx) => fillItem || '-');
+}
+
+console.log('arr', createArr(12, '1'));
