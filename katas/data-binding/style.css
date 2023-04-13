@@ -1,0 +1,22 @@
+body, form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  border: 1px solid #615d5d;
+  padding: 16px;
+  width: 200px;
+}
+
+form, label, input, textarea, button {
+  margin: 8px 0;
+}
+
+label,
+input,
+textarea,
+button {
+  width: 100%;
+}
