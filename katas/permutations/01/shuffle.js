@@ -1,5 +1,5 @@
-const { shiftStr, shiftIdx, getShiftStr } = require(`./shift.js`);
-const { display, divider } = require(`./display.js`); 
+const { shiftStr, shiftIdx, getShiftStr } = require(`./shift.js.js`);
+const { display, divider } = require(`./display.js.js`); 
 
 
 const shuffle = (set, params, counter) => {

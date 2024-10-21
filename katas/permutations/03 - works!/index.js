@@ -1,3 +1,3 @@
 const { permutations } = require('./permutation.js');
 
-permutations('abc');
+permutations('abcd');

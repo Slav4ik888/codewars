@@ -48,7 +48,7 @@ const showRight = () => console.log(`Верно`);
  * @returns 
  */
 exports.testEqual = (description, func, toEqual) => {
-  console.log(``);
+  console.log();
   if (!func) return console.log(`Не указали проверяемую функцию`);
 
   console.log(description);

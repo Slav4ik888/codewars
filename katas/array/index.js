@@ -1,11 +1,7 @@
 
-console.log(`Start`);
-
-[...new Array(10)].forEach((item, i) => {
-  console.log('item: ', i);
-});
-
-console.log(`End`);
+// [...new Array(10)].forEach((item, i) => {
+//   console.log('item: ', i);
+// });
 
 const MOCK_ARTICLE = { mock: '123' }
 
@@ -18,4 +14,29 @@ const createArr = (length, fillItem) => {
     .map((_, idx) => fillItem || '-');
 }
 
-console.log('arr', createArr(12, '1'));
+// console.log('arr', createArr(12, '1'));
+
+// ------------------------------------------------
+
+const OBJ = {
+  a: {
+    t: 'hi'
+  },
+  b: 'buhay',
+  c: ['1', '2', 3, 4, { ab: 'abc' }]
+};
+
+
+function arrFromObj(obj) {
+  let arr = [];
+
+  for (let key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      arr.push(obj[key]);
+    }
+  }
+  return arr;
+};
+
+console.log(arrFromObj(OBJ));
+console.log(Object.values(OBJ));
