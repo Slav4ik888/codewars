@@ -1,4 +1,3 @@
-require('dotenv').config();
 const log = require('./utils/log')(`main`);
 
 const isSortedAndHow = require('./katas/is-sorted-and-how');
@@ -12,10 +11,6 @@ const getArray = require('./katas/get-array');
 log(`getArray(5)`, getArray(5)); // => [undefined x 5]
 log(`getArray('a', 'b', 'c')`, getArray('a', 'b', 'c')) // => ['a', 'b', 'c']
 
-console.log(`--------------`);
-log(`process.env.NAME_SPACE`, process.env.NAME_SPACE);
-process.env.NAME_SPACE += ` Korzan`;
-log(`process.env.NAME_SPACE`, process.env.NAME_SPACE);
 
 
 let arr = [1, 2, 3, 4, 5];
@@ -23,4 +18,5 @@ let arr = [1, 2, 3, 4, 5];
 arr.splice(0);
 console.log(arr);
 
-// git add . && git commit -m "2024-10-21" && git push -u origin main
+
+// git add . && git commit -m "2025-05-01 add spiral" && git push -u origin main
