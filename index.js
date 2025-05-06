@@ -19,4 +19,4 @@ arr.splice(0);
 console.log(arr);
 
 
-// git add . && git commit -m "2025-05-01 add spiral" && git push -u origin main
+// git add . && git commit -m "2025-05-05 add spiralize2" && git push -u origin main

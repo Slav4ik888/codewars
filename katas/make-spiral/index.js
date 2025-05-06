@@ -104,10 +104,40 @@ function checkAround(n, spiral, x, y, direction) {
 	return result
 }
 
+// Решение другого
 
-const result = spiralize(4);
+// The idea is to build an array of "concentrical" '0' and '1' squares replacing
+// to opposite just a few figures along the diagonal in the upper left quadrant. 
+// Smth like:
+
+//  1 1 1 1 1 1 1 1    1 1 1 1 1 1 1 1    1 1 1 1 1 1 1 1
+//  1             1    *             1                  1
+//  1   1 1 1 1   1    1 * 1 1 1 1   1    1 1 1 1 1 1   1
+//  1   1     1   1 => 1   *     1   1 => 1         1   1
+//  1   1     1   1 => 1   1     1   1 => 1   1     1   1
+//  1   1 1 1 1   1    1   1 1 1 1   1    1   1 1 1 1   1
+//  1             1    1             1    1             1
+//  1 1 1 1 1 1 1 1    1 1 1 1 1 1 1 1    1 1 1 1 1 1 1 1
+
+const spiralize2 = (size) =>
+
+	Array.from({ length: size }, () => Array.from({ length: size }))
+		.map((row, rowIdx) => row.map((col, colIdx) => {
+			const shouldReverse = rowIdx <= size / 2 - 1 + Math.sign(size % 4) && rowIdx - colIdx === 1;
+			const rowIdxMirror = (rowIdx < size / 2) ? rowIdx : size - 1 - rowIdx;
+			const colIdxMirror = (colIdx < size / 2) ? colIdx : size - 1 - colIdx;
+
+			return rowIdxMirror % 2 && rowIdxMirror <= colIdxMirror ||
+				colIdxMirror % 2 && rowIdxMirror >= colIdxMirror ?
+				(0 - shouldReverse) ** 2 : 1 - shouldReverse;
+		}));
+
+// from<T, U>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[]
+
+const result = spiralize2(5);
 showSpiralize(result);
 
+// console.log(Array.from({ length: 5 }, () => '-'));
 
 // ---- TESTING ---- //
 function showSpiralize(array) {
